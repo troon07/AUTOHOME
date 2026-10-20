@@ -1,0 +1,6 @@
+pytest==9.0.3
+pyserial==3.5
+platformio==6.2.0
+matplotlib==3.10.8
+ziglang==0.13.0
+esptool==5.4.0

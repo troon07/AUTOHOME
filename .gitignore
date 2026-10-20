@@ -1,0 +1,17 @@
+.pio/
+__pycache__/
+.pytest_cache/
+*.pyc
+key.pem
+cert.pem
+benchmarks/backups/
+firmware/common/config/private_config.h
+local_credentials.json
+benchmarks/review/
+benchmarks/.host_build/
+native/sdkconfig.native_*
+speech/.pio/
+speech/components/
+speech/managed_components/
+speech/sdkconfig.*
+!speech/sdkconfig.defaults

@@ -1,0 +1,279 @@
+{
+  "execution_source": "HARDWARE_MEASURED",
+  "input_source": "SIMULATED",
+  "setup": "COM7 Node B only; no A, sensors, relays or physical feedback",
+  "firmware_sha256": "523b8d0c37ec76cc71d83b3e19b2c01269f2abf747036aaaa1468a5ecd04c8a7",
+  "cases": [
+    {
+      "test": "api_speech",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "api_memory",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "api_rtos",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "api_state",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "api_evidence",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "initial_unknown",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "missing_feedback_timeout",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "wrong_boot",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "wrong_command",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "future_sample",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "stale_sample",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "pre_command_sample",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "duplicate_no_renewal",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "missing_modality",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "shared_fault_domain",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "repeated_command_id",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "fresh_agreement",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "lease_expiry_unknown",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "contradiction_latches",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "fault_cannot_clear_on",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "confirmed_off_manual_clear",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "deadline_cannot_be_repaired_late",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "uint32_clock_wrap",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "sample_gap_breaks_stability",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "backward_sample_time",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "duplicate_generation_time",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "1024_value_availability_domain_clock_vectors",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "new_id_cannot_extend_pending_deadline",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "monitor_requires_token",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "short_pcm_rejected_without_job",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "speech_model_ready",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    },
+    {
+      "test": "memory_config_ok",
+      "execution_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "status": "PASS"
+    }
+  ],
+  "records": {
+    "speech": {
+      "processing_source": "HARDWARE_MEASURED",
+      "supported": true,
+      "engine": "ESP-SR 1.7.0 MultiNet6 English",
+      "phase": 4,
+      "job": 18,
+      "command_id": 0,
+      "confidence": 0.0,
+      "samples": 32000,
+      "inference_us": 1060700,
+      "max_frame_us": 16836,
+      "frames": 94,
+      "stack_free_bytes": 7432,
+      "pcm_crc32": 1464200103,
+      "diagnostic_text": "",
+      "authorized": false
+    },
+    "memory": {
+      "source": "HARDWARE_MEASURED",
+      "internal_free": 104003,
+      "internal_min": 55983,
+      "internal_largest": 59392,
+      "psram_total": 8388608,
+      "psram_free": 4088087,
+      "psram_largest": 3866624,
+      "stack_task": "http",
+      "stack_free_bytes": 3624,
+      "rx_dropped": 0,
+      "memory_config_ok": true
+    },
+    "rtos": {
+      "source": "HARDWARE_MEASURED",
+      "task": "LinkTask",
+      "core": 0,
+      "priority": 3,
+      "period_ms": 5,
+      "jobs": 79417,
+      "max_exec_us": 1674,
+      "max_late_us": 27,
+      "deadline_misses": 0,
+      "stack_free_bytes": 3244,
+      "watchdog": true,
+      "task_count": 12
+    },
+    "state": {
+      "room": "bedroom",
+      "known": true,
+      "occupancy": "UNKNOWN",
+      "motion": false,
+      "light": false,
+      "fan": false,
+      "age_ms": 159,
+      "reports": 390,
+      "invalid": 0,
+      "replayed": 0,
+      "authenticated": true,
+      "mode": "HOME",
+      "auto_flags": 1,
+      "manual_flags": 1,
+      "grace_ms": 120000,
+      "light_timer_ms": 0,
+      "fan_timer_ms": 0,
+      "light_on_ms": 0,
+      "fan_on_ms": 0,
+      "last_command": 21
+    },
+    "evidence": {
+      "processing_source": "HARDWARE_MEASURED",
+      "input_source": "SIMULATED",
+      "scope": "shadow monitor selftest; no actuation",
+      "passed_mask": 8388607,
+      "cases": 23,
+      "execution_us": 398,
+      "monitor_bytes": 60,
+      "physical_verification": false
+    }
+  },
+  "errors": []
+}

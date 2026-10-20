@@ -1,0 +1,82 @@
+{
+  "trace": "research_20261020T060226Z.json",
+  "recovery": "recovery_20261020T061525Z.json",
+  "single_b_trace": "single_b_20261020T080754Z.json",
+  "audio_trace": "audio_20261020T081414Z.json",
+  "host_passed": 83,
+  "cases_passed": 81,
+  "cases_total": 81,
+  "command_trials": 1000,
+  "command_success": 1000,
+  "statistics_us": {
+    "n": 1000,
+    "mean": 22588.717,
+    "median": 18789.0,
+    "p95": 44032.84999999997,
+    "p99": 56754.329999999994,
+    "minimum": 15680,
+    "maximum": 91841,
+    "mean_ci95_bootstrap": [
+      21977.798375,
+      23204.75615
+    ],
+    "bootstrap_seed": 20261020,
+    "bootstrap_resamples": 2000
+  },
+  "memory_bytes": [
+    [
+      "A",
+      190075,
+      180851,
+      151552,
+      8386111,
+      8257536
+    ],
+    [
+      "B",
+      104655,
+      55459,
+      59392,
+      4089807,
+      3866624
+    ]
+  ],
+  "rtos": [
+    [
+      "A",
+      "ControlTask",
+      420,
+      144,
+      0,
+      4016
+    ],
+    [
+      "A",
+      "LinkTask",
+      1511,
+      5,
+      0,
+      4096
+    ],
+    [
+      "B",
+      "LinkTask",
+      1247,
+      2,
+      0,
+      3244
+    ]
+  ],
+  "firmware_sha256": {
+    "native_voice": "edb0ff713a1773576b3089535120e33fe0a368be3cd44ab5f41cd73e41899af4",
+    "speech_intelligence": "b127f5d99a7943ddd76a7305261ac0278584545c746c14942abf705f61a37e91",
+    "speech_models": "b46a65befe47187f793ffb8108f74ab091338060060a54d23b69c385c3213d80"
+  },
+  "current_b_sha256": "523b8d0c37ec76cc71d83b3e19b2c01269f2abf747036aaaa1468a5ecd04c8a7",
+  "current_b_single_board_verified": true,
+  "staged_a_sha256": "5f7d10668b3dd267556e6506912064c74bfde8b1db720a8416880f0aca0e1aa2",
+  "hardware_available": "B_ONLY",
+  "speech_campaign_complete": true,
+  "speech_functional": false,
+  "recovery_campaign_complete": false
+}

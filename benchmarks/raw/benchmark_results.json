@@ -1,0 +1,98 @@
+[
+  {
+    "source": "SIMULATED",
+    "model_params": 1000000,
+    "hidden_dim": 128,
+    "layers": 8,
+    "seq_len": 1,
+    "tensor_split_bytes": 128,
+    "mode_a_single_node": {
+      "latency_ms": 33.33,
+      "node_a_psram_bytes": 1004224,
+      "node_b_psram_bytes": 0,
+      "network_bytes_transferred": 0,
+      "tokens_per_second": 30.0
+    },
+    "mode_b_parallel_tasks": {
+      "latency_ms": 27.41,
+      "semantic_packet_bytes": 32,
+      "network_time_ms": 4.71
+    },
+    "mode_c_split_model": {
+      "latency_ms": 37.81,
+      "node_a_compute_ms": 16.67,
+      "node_b_compute_ms": 16.67,
+      "quant_serialization_ms": 0.01,
+      "network_transfer_ms": 4.47,
+      "chunks_transmitted": 1,
+      "total_wire_bytes": 250,
+      "speedup_vs_single_node": 0.882,
+      "helped_or_hurt": "HURT (Communication overhead exceeds compute savings)"
+    },
+    "model_name": "Nano-MLP (1.0M)"
+  },
+  {
+    "source": "SIMULATED",
+    "model_params": 3200000,
+    "hidden_dim": 256,
+    "layers": 12,
+    "seq_len": 1,
+    "tensor_split_bytes": 256,
+    "mode_a_single_node": {
+      "latency_ms": 106.67,
+      "node_a_psram_bytes": 3212544,
+      "node_b_psram_bytes": 0,
+      "network_bytes_transferred": 0,
+      "tokens_per_second": 9.38
+    },
+    "mode_b_parallel_tasks": {
+      "latency_ms": 27.41,
+      "semantic_packet_bytes": 32,
+      "network_time_ms": 4.71
+    },
+    "mode_c_split_model": {
+      "latency_ms": 115.63,
+      "node_a_compute_ms": 53.33,
+      "node_b_compute_ms": 53.33,
+      "quant_serialization_ms": 0.03,
+      "network_transfer_ms": 8.93,
+      "chunks_transmitted": 2,
+      "total_wire_bytes": 500,
+      "speedup_vs_single_node": 0.923,
+      "helped_or_hurt": "HURT (Communication overhead exceeds compute savings)"
+    },
+    "model_name": "TinyStories (3.2M)"
+  },
+  {
+    "source": "SIMULATED",
+    "model_params": 15000000,
+    "hidden_dim": 512,
+    "layers": 16,
+    "seq_len": 1,
+    "tensor_split_bytes": 512,
+    "mode_a_single_node": {
+      "latency_ms": 500.0,
+      "node_a_psram_bytes": 15033280,
+      "node_b_psram_bytes": 0,
+      "network_bytes_transferred": 0,
+      "tokens_per_second": 2.0
+    },
+    "mode_b_parallel_tasks": {
+      "latency_ms": 27.41,
+      "semantic_packet_bytes": 32,
+      "network_time_ms": 4.71
+    },
+    "mode_c_split_model": {
+      "latency_ms": 513.45,
+      "node_a_compute_ms": 250.0,
+      "node_b_compute_ms": 250.0,
+      "quant_serialization_ms": 0.05,
+      "network_transfer_ms": 13.4,
+      "chunks_transmitted": 3,
+      "total_wire_bytes": 750,
+      "speedup_vs_single_node": 0.974,
+      "helped_or_hurt": "HURT (Communication overhead exceeds compute savings)"
+    },
+    "model_name": "Micro-Transformer (15M)"
+  }
+]

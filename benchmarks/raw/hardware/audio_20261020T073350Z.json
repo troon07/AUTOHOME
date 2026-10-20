@@ -1,0 +1,71 @@
+{
+  "audio_source": "SIMULATED",
+  "processing_source": "HARDWARE_MEASURED",
+  "setup": "Node B only; no actuator/control test",
+  "firmware_sha256": {
+    "B": "c1ce5204b95cf6e1adf4b7930fb52fe09d331aebca9e715a9ba95682ada2c2e0",
+    "model": "b46a65befe47187f793ffb8108f74ab091338060060a54d23b69c385c3213d80"
+  },
+  "results": [
+    {
+      "name": "command_01.wav",
+      "audio_source": "SIMULATED",
+      "processing_source": "HARDWARE_MEASURED",
+      "expected_id": 1,
+      "recognized_id": 0,
+      "correct": false,
+      "pcm_sha256": "5a7fc2c2de990e38e3f1c552c5a7cfb334be79cf1795407ce39edbb0bfee8e66",
+      "samples": 33520,
+      "browser_transport_source": "HOST_MEASURED",
+      "host_job_ms": 2754.7079,
+      "board": {
+        "processing_source": "HARDWARE_MEASURED",
+        "supported": true,
+        "engine": "ESP-SR 1.7.0 MultiNet6 English",
+        "phase": 4,
+        "job": 1,
+        "command_id": 0,
+        "confidence": 0.0,
+        "samples": 33520,
+        "inference_us": 1379605,
+        "max_frame_us": 23028,
+        "frames": 97,
+        "stack_free_bytes": 7448,
+        "pcm_crc32": 2847953144,
+        "diagnostic_text": "",
+        "authorized": false
+      },
+      "control": null,
+      "phase_before_control": 3,
+      "memory": {
+        "source": "HARDWARE_MEASURED",
+        "internal_free": 105951,
+        "internal_min": 56023,
+        "internal_largest": 59392,
+        "psram_total": 8388608,
+        "psram_free": 4088019,
+        "psram_largest": 3866624,
+        "stack_task": "http",
+        "stack_free_bytes": 3800,
+        "rx_dropped": 0,
+        "memory_config_ok": true
+      },
+      "rtos": {
+        "source": "HARDWARE_MEASURED",
+        "task": "LinkTask",
+        "core": 0,
+        "priority": 3,
+        "period_ms": 5,
+        "jobs": 14534,
+        "max_exec_us": 65,
+        "max_late_us": 2,
+        "deadline_misses": 0,
+        "stack_free_bytes": 4652,
+        "watchdog": true,
+        "task_count": 12
+      }
+    }
+  ],
+  "errors": [],
+  "limitations": "One synthetic voice; no independent human speakers, acoustic room/noise/distance validation, or model comparison. No accuracy generalization."
+}

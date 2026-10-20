@@ -1,0 +1,50 @@
+{
+  "input_source": "SIMULATED",
+  "execution_source": "HOST_MEASURED",
+  "raw_csv": "benchmarks\\raw\\evidence_matrix_20261020T082005Z.csv",
+  "rows": 4096,
+  "conditions": [
+    {
+      "condition": "ack_only",
+      "input_source": "SIMULATED",
+      "execution_source": "HOST_MEASURED",
+      "cases": 4096,
+      "verified_assertions": 4096,
+      "contract_violations": 4088,
+      "eligible_cases_not_verified": 0,
+      "physical_false_assertions_in_modeled_lying_sensor_cases": 2048
+    },
+    {
+      "condition": "feedback_only",
+      "input_source": "SIMULATED",
+      "execution_source": "HOST_MEASURED",
+      "cases": 4096,
+      "verified_assertions": 256,
+      "contract_violations": 248,
+      "eligible_cases_not_verified": 0,
+      "physical_false_assertions_in_modeled_lying_sensor_cases": 128
+    },
+    {
+      "condition": "fresh_bound_feedback",
+      "input_source": "SIMULATED",
+      "execution_source": "HOST_MEASURED",
+      "cases": 4096,
+      "verified_assertions": 32,
+      "contract_violations": 24,
+      "eligible_cases_not_verified": 0,
+      "physical_false_assertions_in_modeled_lying_sensor_cases": 16
+    },
+    {
+      "condition": "monitor_verified",
+      "input_source": "SIMULATED",
+      "execution_source": "HOST_MEASURED",
+      "cases": 4096,
+      "verified_assertions": 4,
+      "contract_violations": 0,
+      "eligible_cases_not_verified": 4,
+      "physical_false_assertions_in_modeled_lying_sensor_cases": 2
+    }
+  ],
+  "algorithm_sha256": "8e6aeea516a0202c3675e0228b5ead2dbd249daebab0f65e0211e265c428ccc4",
+  "limitations": "Finite designed truth table, not independent real-world data. Joint sensor lies can satisfy every observable contract. No state-of-art baseline, physical safety proof, energy result or novelty established."
+}

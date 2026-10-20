@@ -1,0 +1,82 @@
+test,source,status,details
+physical_outputs_inhibited,HARDWARE_MEASURED,PASS,
+COM5_runtime_selftest,HARDWARE_MEASURED,PASS,
+COM5_psram_probe,HARDWARE_MEASURED,PASS,
+COM7_runtime_selftest,HARDWARE_MEASURED,PASS,
+COM7_psram_probe,HARDWARE_MEASURED,PASS,
+esp32_speech_model_ready,HARDWARE_MEASURED,PASS,"{""processing_source"": ""HARDWARE_MEASURED"", ""supported"": true, ""engine"": ""ESP-SR 1.7.0 MultiNet6 English"", ""phase"": 1, ""job"": 0, ""command_id"": 0, ""confidence"": 0.0, ""samples"": 0, ""inference_us"": 0, ""max_frame_us"": 0, ""frames"": 0, ""stack_free_bytes"": 0, ""authorized"": false}"
+authenticated_room_telemetry,HARDWARE_MEASURED,PASS,
+http_loopback_suite,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""http_selftest"", ""passed"": true, ""passed_cases"": 23, ""total_cases"": 23}"
+http_state,HARDWARE_MEASURED,PASS,
+http_memory,HARDWARE_MEASURED,PASS,
+http_rtos_telemetry,HARDWARE_MEASURED,PASS,
+http_simulation_page,HARDWARE_MEASURED,PASS,
+http_simulation_source_label,HARDWARE_MEASURED,PASS,
+http_unauthorized_simulation,HARDWARE_MEASURED,PASS,
+http_malformed_simulation,HARDWARE_MEASURED,PASS,
+http_invalid_simulation_flags,HARDWARE_MEASURED,PASS,
+http_simulation_input_queue,HARDWARE_MEASURED,PASS,
+http_simulation_board_occupancy,HARDWARE_MEASURED,PASS,
+http_simulation_board_outputs,HARDWARE_MEASURED,PASS,
+http_simulation_input_expiry,HARDWARE_MEASURED,PASS,
+http_unauthorized_control,HARDWARE_MEASURED,PASS,
+http_wrong_token,HARDWARE_MEASURED,PASS,
+http_unauthorized_transaction,HARDWARE_MEASURED,PASS,
+http_authorized_transaction,HARDWARE_MEASURED,PASS,
+http_parser_preview,HARDWARE_MEASURED,PASS,
+http_parser_ambiguity,HARDWARE_MEASURED,PASS,
+http_bad_control,HARDWARE_MEASURED,PASS,
+http_overflow_control,HARDWARE_MEASURED,PASS,
+http_oversized_body,HARDWARE_MEASURED,PASS,
+http_unknown_route,HARDWARE_MEASURED,PASS,
+http_authorized_control_queue,HARDWARE_MEASURED,PASS,
+away_scene,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1025, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 18773, ""processing_us"": 37, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+light_on,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1026, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 15674, ""processing_us"": 33, ""light"": true, ""fan"": false, ""outcome_known"": true}"
+rapid_off_denied,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1027, ""phase"": 2, ""status"": 1, ""attempts"": 1, ""rtt_us"": 27750, ""processing_us"": 30, ""light"": true, ""fan"": false, ""outcome_known"": true}"
+light_off_after_dwell,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1028, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 19763, ""processing_us"": 32, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+sleep_scene,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1029, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 16797, ""processing_us"": 41, ""light"": false, ""fan"": true, ""outcome_known"": true}"
+away_after_sleep,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1030, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 18759, ""processing_us"": 41, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+enable_fan_automation,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1031, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 15730, ""processing_us"": 28, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+set_vacancy_grace,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1032, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 17795, ""processing_us"": 26, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+reject_short_grace,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1033, ""phase"": 2, ""status"": 2, ""attempts"": 1, ""rtt_us"": 19797, ""processing_us"": 29, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+reject_timer_overflow,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1034, ""phase"": 2, ""status"": 2, ""attempts"": 1, ""rtt_us"": 16779, ""processing_us"": 25, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+home_scene,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1035, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 23817, ""processing_us"": 29, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+fan_on,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1036, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 19807, ""processing_us"": 35, ""light"": false, ""fan"": true, ""outcome_known"": true}"
+fan_timer,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1037, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 16777, ""processing_us"": 24, ""light"": false, ""fan"": true, ""outcome_known"": true}"
+fan_reported_on_before_timer,HARDWARE_MEASURED,PASS,
+fan_off_after_timer,HARDWARE_MEASURED,PASS,
+timer_cancel,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1038, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 23779, ""processing_us"": 25, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+resume_light_auto,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1039, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 15779, ""processing_us"": 31, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+restore_fan_policy,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1040, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 17739, ""processing_us"": 25, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+restore_light_policy,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1041, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 29757, ""processing_us"": 27, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+restore_grace,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1042, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 16738, ""processing_us"": 26, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+all_off_scene,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1043, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 18764, ""processing_us"": 39, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+noop_ack_trials,HARDWARE_MEASURED,PASS,1000/1000
+lost_ack_retry,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 2044, ""phase"": 2, ""status"": 0, ""attempts"": 2, ""rtt_us"": 316775, ""processing_us"": 29, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+retry_uses_cached_result,HARDWARE_MEASURED,PASS,
+bad_auth_tag_rejected,HARDWARE_MEASURED,PASS,
+changed_duplicate_payload_rejected,HARDWARE_MEASURED,PASS,
+duplicate_replied_without_reexecution,HARDWARE_MEASURED,PASS,
+cached_ack_survives_altered_replay,HARDWARE_MEASURED,PASS,
+wrong_boot_rejected,HARDWARE_MEASURED,PASS,
+application_outage_timeout,HARDWARE_MEASURED,PASS,
+stale_state_becomes_unknown,HARDWARE_MEASURED,FAIL,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""state"", ""known"": true, ""light"": false, ""fan"": false, ""mode"": 0, ""grace_ms"": 120000, ""auto_flags"": 1, ""last_command"": 2044, ""age_ms"": 715}"
+stale_control_rejected,HARDWARE_MEASURED,FAIL,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""queued"", ""accepted"": true, ""id"": 2045}"
+telemetry_recovers_after_outage,HARDWARE_MEASURED,PASS,
+control_recovers_after_outage,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 2046, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 17770, ""processing_us"": 28, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+COM5_memory_headroom,HARDWARE_MEASURED,PASS,
+COM5_bounded_queue,HARDWARE_MEASURED,PASS,
+COM7_memory_headroom,HARDWARE_MEASURED,PASS,
+COM7_bounded_queue,HARDWARE_MEASURED,PASS,
+COM5_ControlTask_progress,HARDWARE_MEASURED,PASS,
+COM5_ControlTask_watchdog,HARDWARE_MEASURED,PASS,
+COM5_ControlTask_stack_margin,HARDWARE_MEASURED,PASS,
+COM5_ControlTask_diagnostic_queue,HARDWARE_MEASURED,PASS,
+COM5_LinkTask_progress,HARDWARE_MEASURED,PASS,
+COM5_LinkTask_watchdog,HARDWARE_MEASURED,PASS,
+COM5_LinkTask_stack_margin,HARDWARE_MEASURED,PASS,
+COM5_LinkTask_diagnostic_queue,HARDWARE_MEASURED,PASS,
+COM7_LinkTask_progress,HARDWARE_MEASURED,PASS,
+COM7_LinkTask_watchdog,HARDWARE_MEASURED,PASS,
+COM7_LinkTask_stack_margin,HARDWARE_MEASURED,PASS,
+COM7_LinkTask_diagnostic_queue,HARDWARE_MEASURED,PASS,

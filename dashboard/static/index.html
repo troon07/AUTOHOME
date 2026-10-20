@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ClawGrid V2.0 | Offline-First Edge AI Dashboard</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #121926;
+      --border: #1f293d;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --unknown: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 16px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { font-size: 1.25rem; font-weight: 700; color: #60a5fa; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-offline { background: #064e3b; color: #6ee7b7; border: 1px solid #059669; }
+    .badge-occupied { background: #064e3b; color: #34d399; }
+    .badge-likely { background: #78350f; color: #fde68a; }
+    .badge-vacant { background: #1f2937; color: #9ca3af; }
+    .badge-unknown { background: #374151; color: #d1d5db; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      position: relative;
+    }
+    .card h2 { font-size: 1.1rem; margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .room-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
+    
+    .device-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-top: 1px solid var(--border);
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-off { background: #374151; color: #9ca3af; }
+    .btn-action { background: #4f46e5; }
+    .btn-action:hover { background: #4338ca; }
+    
+    .voice-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    .voice-input-group { display: flex; gap: 8px; margin-top: 10px; }
+    input[type="text"] {
+      flex: 1;
+      background: #090d16;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: white;
+      font-size: 0.9rem;
+    }
+    input[type="text"]:focus { outline: none; border-color: var(--primary); }
+    
+    .clarification-alert {
+      margin-top: 10px;
+      background: #78350f;
+      border: 1px solid #d97706;
+      color: #fef3c7;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: none;
+    }
+    
+    .benchmark-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.85rem; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border); }
+    th { color: var(--text-muted); font-weight: 600; }
+    
+    .logs-box {
+      background: #06090f;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 0.75rem;
+      height: 140px;
+      overflow-y: auto;
+      color: #a7f3d0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>CLAWGRID V2.0</h1>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Dual ESP32-S3 Offline Edge AI Automation</p>
+    </div>
+    <span class="badge badge-offline">Offline Local Mesh</span>
+  </header>
+
+  <!-- Voice Control with Phone Microphone -->
+  <section class="voice-box">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>Phone Microphone & Local Edge-AI Intent</h3>
+      <span class="badge badge-occupied" id="micStatusBadge">Phone Mic Ready</span>
+    </div>
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+      Speak directly into your phone. The audio/text is sent to the 2 ESP32-S3s where the cooperative model & Safety Kernel execute.
+    </p>
+
+    <div style="display:flex; gap:10px; align-items:center; margin-top:12px;">
+      <button class="btn btn-action" id="micBtn" onclick="togglePhoneMic()" style="display:flex; align-items:center; gap:6px; padding:10px 18px; font-size:1rem; border-radius:30px;">
+        <span id="micIcon">🎙️</span> <span id="micLabel">Tap to Speak</span>
+      </button>
+      <div style="flex:1;">
+        <input type="text" id="voiceInput" placeholder="Or type/dictate via phone keyboard..." value="Hey Claw, turn on bedroom light">
+      </div>
+      <button class="btn" onclick="sendVoiceCommand()">Run Model</button>
+    </div>
+
+    <!-- Cooperative Pipeline Execution Visualizer -->
+    <div id="pipelineBox" style="margin-top:12px; padding:10px; background:#0b1322; border-radius:8px; border:1px solid #1e293b; font-size:0.8rem;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+        <span style="color:#94a3b8;">Dual ESP32-S3 Pipeline:</span>
+        <span id="pipelineTiming" style="color:#60a5fa; font-weight:bold;">Ready</span>
+      </div>
+      <div style="display:flex; gap:4px; align-items:center;">
+        <div id="pipeStep1" style="flex:1; padding:4px; text-align:center; background:#1e293b; border-radius:4px; font-size:0.75rem;">1. Phone Mic Input</div>
+        <span style="color:#475569;">➔</span>
+        <div id="pipeStep2" style="flex:1; padding:4px; text-align:center; background:#1e293b; border-radius:4px; font-size:0.75rem;">2. Node B (Layer 0..L/2)</div>
+        <span style="color:#475569;">➔</span>
+        <div id="pipeStep3" style="flex:1; padding:4px; text-align:center; background:#1e293b; border-radius:4px; font-size:0.75rem;">3. Node A (Layer L/2..L)</div>
+        <span style="color:#475569;">➔</span>
+        <div id="pipeStep4" style="flex:1; padding:4px; text-align:center; background:#1e293b; border-radius:4px; font-size:0.75rem;">4. Safety Kernel Gate</div>
+      </div>
+    </div>
+
+    <div id="clarifyBox" class="clarification-alert"></div>
+  </section>
+
+  <!-- Room Cards -->
+  <div class="grid" id="roomsGrid">
+    <!-- Populated dynamically via JS -->
+  </div>
+
+  <!-- Research Benchmark Harness -->
+  <section class="benchmark-section">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>Cooperative Edge-AI Benchmark (Research Comparison)</h3>
+      <div>
+        <button class="btn" onclick="runBenchmark()">Run Benchmark</button>
+        <button class="btn btn-off" onclick="exportBenchmarkJSON()">Export JSON</button>
+      </div>
+    </div>
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+      Comparing Mode A (Single Node Baseline), Mode B (Parallel Responsibilities), and Mode C (Split-Model Partitioned Inference).
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Configuration</th>
+          <th>Compute (ms)</th>
+          <th>Network / Transfer (ms)</th>
+          <th>Total Latency (ms)</th>
+          <th>Throughput / Memory</th>
+          <th>Source Tag</th>
+        </tr>
+      </thead>
+      <tbody id="benchmarkRows">
+        <tr><td colspan="6" style="text-align:center; color:var(--text-muted);">Click 'Run Benchmark' to measure metrics.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Safety Kernel Audit Logs -->
+  <section class="card">
+    <h3 style="margin-bottom: 8px;">Deterministic Safety Kernel Audit Log</h3>
+    <div class="logs-box" id="auditLogs">
+      [0.00s] Safety Kernel initialized. Zero mains voltage enforced. Fail-safe defaults applied.
+    </div>
+  </section>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

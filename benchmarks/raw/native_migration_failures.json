@@ -1,0 +1,9 @@
+{
+  "source": "HARDWARE_MEASURED",
+  "observations": [
+    "ESP-IDF USB console using interrupt driver stopped yielding diagnostics after reconnect. Polling HAL was introduced; further transport validation pending.",
+    "Temporary esptool flasher stub stopped responding at baud/flash attachment. ROM-loader --no-stub flashing and verification succeeded.",
+    "Native HTTP self-tests returned false and USB HTTP tunnel returned 502 incomplete response. The socket adapter is being corrected; these runs are not passing benchmark evidence."
+  ],
+  "inferences_are_not_proven_causes": true
+}

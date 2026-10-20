@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="6" failures="0" skipped="0" tests="46" time="10.935" timestamp="2026-10-20T10:48:14.827528+05:30" hostname="THARUN"><testcase classname="tests.failure_injection.test_failure_injection" name="test_rapid_toggle_flood_attack" time="0.002" /><testcase classname="tests.failure_injection.test_failure_injection" name="test_stale_network_packet_handling" time="0.001" /><testcase classname="tests.failure_injection.test_failure_injection" name="test_node_disconnect_degraded_standalone" time="0.001" /><testcase classname="tests.failure_injection.test_failure_injection" name="test_safe_initialization_on_boot" time="0.001" /><testcase classname="tests.integration.test_end_to_end" name="test_voice_command_to_safety_actuation_pipeline" time="0.002" /><testcase classname="tests.integration.test_end_to_end" name="test_cooperative_inference_research_comparison" time="0.001" /><testcase classname="tests.protocol.test_corruption_campaign" name="test_single_bit_faults" time="1.736" /><testcase classname="tests.protocol.test_protocol" name="test_packet_serialization_deserialization" time="0.001" /><testcase classname="tests.protocol.test_protocol" name="test_corrupted_crc_rejection" time="0.001" /><testcase classname="tests.protocol.test_protocol" name="test_truncated_packet" time="0.001" /><testcase classname="tests.protocol.test_protocol" name="test_invalid_magic_and_version" time="0.001" /><testcase classname="tests.protocol.test_wire_contract" name="test_firmware_golden_vector" time="0.001" /><testcase classname="tests.protocol.test_wire_contract" name="test_maximum_frame_and_trailing_bytes" time="0.002" /><testcase classname="tests.protocol.test_wire_contract" name="test_unsupported_fields_rejected_even_with_valid_crc[3-255]" time="0.003" /><testcase classname="tests.protocol.test_wire_contract" name="test_unsupported_fields_rejected_even_with_valid_crc[4-128]" time="0.003" /><testcase classname="tests.protocol.test_wire_contract" name="test_unsupported_fields_rejected_even_with_valid_crc[5-1]" time="0.001" /><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[runtime]" time="7.764"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[safety]" time="0.001"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[automation]" time="0.001"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[house]" time="0.001"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[leases]" time="0.001"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_firmware_cpp" name="test_actual_firmware[sensor_boundaries]" time="0.011"><error message="failed on setup with &quot;subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.&quot;">tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=&lt;pluggy._tracing.TagTracerSub object at 0x000001FA336D7830&gt;, _basetemp=WindowsPath('C:/Users/sthar/AppData/Local/Temp/pytest-of-sthar/pytest-0'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def executable(tmp_path_factory):
+        path=tmp_path_factory.mktemp('firmware_cpp')/'checks.exe'
+        common=ROOT/'firmware/common'
+        command=[sys.executable,'-m','ziglang','c++','-std=c++17','-O2']
+        command += [f'-I{common/name}' for name in ('runtime','protocol','safety_kernel')]
+        command += [str(ROOT/'tests/native/firmware_checks.cpp'),
+                    str(common/'runtime/runtime_selftest.cpp'),
+                    str(common/'safety_kernel/safety_kernel.c'),
+                    str(common/'safety_kernel/safety_selftest.c'),
+                    str(common/'protocol/clawgrid_protocol.c'),'-o',str(path)]
+&gt;       subprocess.run(command,check=True,capture_output=True,text=True,timeout=180)
+
+tests\unit\test_firmware_cpp.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = 180, check = True
+popenargs = (['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', ...],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}
+process = &lt;Popen: returncode: 1 args: ['C:\\Program Files\\Python312\\python.exe', '-m...&gt;
+stdout = ''
+stderr = "error: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\nerror: invalid argument '-std=c++17' not allowed with 'C'\n"
+retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Program Files\\Python312\\python.exe', '-m', 'ziglang', 'c++', '-std=c++17', '-O2', '-ID:\\ESD\\firmware\\common\\runtime', '-ID:\\ESD\\firmware\\common\\protocol', '-ID:\\ESD\\firmware\\common\\safety_kernel', 'D:\\ESD\\tests\\native\\firmware_checks.cpp', 'D:\\ESD\\firmware\\common\\runtime\\runtime_selftest.cpp', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_kernel.c', 'D:\\ESD\\firmware\\common\\safety_kernel\\safety_selftest.c', 'D:\\ESD\\firmware\\common\\protocol\\clawgrid_protocol.c', '-o', 'C:\\Users\\sthar\\AppData\\Local\\Temp\\pytest-of-sthar\\pytest-0\\firmware_cpp0\\checks.exe']' returned non-zero exit status 1.
+
+C:\Program Files\Python312\Lib\subprocess.py:571: CalledProcessError</error></testcase><testcase classname="tests.unit.test_memory_layout" name="test_partition_boundaries_and_ota_alignment" time="0.014" /><testcase classname="tests.unit.test_neural_agent" name="test_scene_reasoning_going_to_sleep" time="0.005" /><testcase classname="tests.unit.test_neural_agent" name="test_implicit_reasoning_temperature" time="0.011" /><testcase classname="tests.unit.test_neural_agent" name="test_implicit_reasoning_darkness" time="0.007" /><testcase classname="tests.unit.test_neural_agent" name="test_fuzzy_typo_of_bedrrom" time="0.007" /><testcase classname="tests.unit.test_neural_agent" name="test_multiturn_conversational_memory" time="0.006" /><testcase classname="tests.unit.test_neural_agent" name="test_implicit_too_bright" time="0.006" /><testcase classname="tests.unit.test_neural_agent" name="test_implicit_cold_off_fan" time="0.006" /><testcase classname="tests.unit.test_neural_agent" name="test_active_room_guessing" time="0.006" /><testcase classname="tests.unit.test_neural_agent" name="test_mismatch_repair_flow" time="0.007" /><testcase classname="tests.unit.test_research_stats" name="test_interpolated_quantiles_and_constant_interval" time="0.008" /><testcase classname="tests.unit.test_research_stats" name="test_reliability_interval_never_claims_certainty" time="0.004" /><testcase classname="tests.unit.test_research_stats" name="test_invalid_observations_are_rejected" time="0.001" /><testcase classname="tests.unit.test_room_state" name="test_single_pir_localization_boundary" time="0.001" /><testcase classname="tests.unit.test_room_state" name="test_vacancy_grace_countdown_and_auto_off" time="0.001" /><testcase classname="tests.unit.test_safety_kernel" name="test_whitelist_validation" time="0.001" /><testcase classname="tests.unit.test_safety_kernel" name="test_dwell_time_anti_cycling" time="0.001" /><testcase classname="tests.unit.test_safety_kernel" name="test_manual_override_lockout" time="0.001" /><testcase classname="tests.unit.test_safety_kernel" name="test_max_continuous_run_cutoff" time="0.001" /><testcase classname="tests.unit.test_voice_parser" name="test_wake_word_extraction" time="0.001" /><testcase classname="tests.unit.test_voice_parser" name="test_explicit_command_parsing" time="0.004" /><testcase classname="tests.unit.test_voice_parser" name="test_disambiguation_with_active_local_context" time="0.003" /><testcase classname="tests.unit.test_voice_parser" name="test_disambiguation_when_ambiguous" time="0.003" /><testcase classname="tests.unit.test_voice_parser" name="test_help_and_cancel_intents" time="0.001" /></testsuite></testsuites>

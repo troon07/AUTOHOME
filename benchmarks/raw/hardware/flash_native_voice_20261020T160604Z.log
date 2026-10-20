@@ -1,0 +1,97 @@
+esptool v5.4.0
+Serial port COM5:
+Connecting...
+Connected to ESP32-S3 on COM5:
+Chip type:          ESP32-S3 (QFN56) (revision v0.2)
+Features:           Wi-Fi, BT 5 (LE), Dual Core + LP Core, 240MHz, Embedded PSRAM 8MB (AP_3v3)
+Crystal frequency:  40MHz
+USB mode:           USB-Serial/JTAG
+MAC:                e0:72:a1:f6:a9:68
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+MAC:                e0:72:a1:f6:a9:68
+
+Staying in bootloader.
+esptool v5.4.0
+Serial port COM5:
+Connecting...
+Connected to ESP32-S3 on COM5:
+Chip type:          ESP32-S3 (QFN56) (revision v0.2)
+Features:           Wi-Fi, BT 5 (LE), Dual Core + LP Core, 240MHz, Embedded PSRAM 8MB (AP_3v3)
+Crystal frequency:  40MHz
+USB mode:           USB-Serial/JTAG
+MAC:                e0:72:a1:f6:a9:68
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+
+Writing 'D:\ESD\native\.pio\build\native_voice\bootloader.bin' at 0x00000000...
+SHA digest in image updated.
+Flash will be erased from 0x00000000 to 0x00005fff...
+Compressed 22320 bytes to 13943...
+Writing at 0x00005730 ============================== 100.0% 13.62kB/13.62kB [0s] 
+Wrote 22320 bytes (13943 compressed) at 0x00000000 in 0.2 seconds (754.6 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing 'D:\ESD\native\.pio\build\native_voice\partitions.bin' at 0x00008000...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 3072 bytes to 144...
+Writing at 0x00008c00 ============================== 100.0% 144B/144B [0s] 
+Wrote 3072 bytes (144 compressed) at 0x00008000 in 0.0 seconds (770.3 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing 'D:\ESD\native\.pio\build\native_voice\ota_data_initial.bin' at 0x0000e000...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Compressed 8192 bytes to 31...
+Writing at 0x00010000 ============================== 100.0% 31B/31B [0s] 
+Wrote 8192 bytes (31 compressed) at 0x0000e000 in 0.1 seconds (1107.2 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing 'D:\ESD\native\.pio\build\native_voice\firmware.bin' at 0x00010000...
+Flash will be erased from 0x00010000 to 0x000aefff...
+Compressed 649440 bytes to 429014...
+Writing at 0x0001bc0c =                                3.8% 16.00kB/418.96kB [0s] 
+Writing at 0x00029123 ==                               7.6% 32.00kB/418.96kB [0s] 
+Writing at 0x0002ecef ===                             11.5% 48.00kB/418.96kB [0s] 
+Writing at 0x00034567 ====>                           15.3% 64.00kB/418.96kB [0s] 
+Writing at 0x00039560 =====>                          19.1% 80.00kB/418.96kB [0s] 
+Writing at 0x0003eed2 ======>                         22.9% 96.00kB/418.96kB [1s] 
+Writing at 0x00043e64 ========                        26.7% 112.00kB/418.96kB [1s] 
+Writing at 0x00048d93 =========                       30.6% 128.00kB/418.96kB [1s] 
+Writing at 0x0004dc37 ==========                      34.4% 144.00kB/418.96kB [1s] 
+Writing at 0x00053039 ===========                     38.2% 160.00kB/418.96kB [1s] 
+Writing at 0x00058470 ============>                   42.0% 176.00kB/418.96kB [1s] 
+Writing at 0x0005d3f9 =============>                  45.8% 192.00kB/418.96kB [2s] 
+Writing at 0x000627aa ==============>                 49.6% 208.00kB/418.96kB [2s] 
+Writing at 0x00068094 ================                53.5% 224.00kB/418.96kB [2s] 
+Writing at 0x0006d003 =================               57.3% 240.00kB/418.96kB [2s] 
+Writing at 0x00072195 ==================              61.1% 256.00kB/418.96kB [2s] 
+Writing at 0x000770aa ===================             64.9% 272.00kB/418.96kB [2s] 
+Writing at 0x0007c4dc ====================>           68.7% 288.00kB/418.96kB [2s] 
+Writing at 0x000818df =====================>          72.6% 304.00kB/418.96kB [2s] 
+Writing at 0x000874a8 ======================>         76.4% 320.00kB/418.96kB [3s] 
+Writing at 0x0008c92e ========================        80.2% 336.00kB/418.96kB [3s] 
+Writing at 0x000920db =========================       84.0% 352.00kB/418.96kB [3s] 
+Writing at 0x0009a98f ==========================      87.8% 368.00kB/418.96kB [3s] 
+Writing at 0x000a28dc ===========================     91.7% 384.00kB/418.96kB [3s] 
+Writing at 0x000a82da ============================>   95.5% 400.00kB/418.96kB [3s] 
+Writing at 0x000ad493 =============================>  99.3% 416.00kB/418.96kB [3s] 
+Writing at 0x000ae8e0 ============================== 100.0% 418.96kB/418.96kB [4s] 
+Wrote 649440 bytes (429014 compressed) at 0x00010000 in 4.1 seconds (1271.3 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Hard resetting via RTS pin...

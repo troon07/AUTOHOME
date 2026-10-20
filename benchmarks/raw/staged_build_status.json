@@ -1,0 +1,19 @@
+{
+  "source": "HOST_MEASURED",
+  "A": {
+    "firmware_sha256": "5f7d10668b3dd267556e6506912064c74bfde8b1db720a8416880f0aca0e1aa2",
+    "compiled": true,
+    "flashed": false,
+    "static_ram_bytes": 63128,
+    "application_flash_bytes": 649077
+  },
+  "B": {
+    "firmware_sha256": "523b8d0c37ec76cc71d83b3e19b2c01269f2abf747036aaaa1468a5ecd04c8a7",
+    "compiled": true,
+    "flashed": true,
+    "static_ram_bytes": 84168,
+    "application_flash_bytes": 1055237,
+    "single_board_trace": "single_b_20261020T080754Z.json"
+  },
+  "scope": "Current B shadow/API validated; latest paired regression and useful speech still pending"
+}

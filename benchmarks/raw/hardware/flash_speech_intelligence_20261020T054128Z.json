@@ -1,0 +1,14 @@
+{
+  "role": "B-speech",
+  "port": "COM7",
+  "mac": "e0:72:a1:f5:bc:b0",
+  "tool": "esptool 4.5.1 ROM loader",
+  "exit_code": 1,
+  "artifacts": [
+    {
+      "address": "0x10000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\firmware.bin",
+      "sha256": "82e3c950dd91fe592b1c9b75acf52b5d66727e16353f2ceb2b4f8cbc4adbea90"
+    }
+  ]
+}

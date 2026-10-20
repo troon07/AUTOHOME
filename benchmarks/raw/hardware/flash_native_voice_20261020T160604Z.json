@@ -1,0 +1,29 @@
+{
+  "role": "A",
+  "port": "COM5",
+  "mac": "e0:72:a1:f6:a9:68",
+  "tool": "esptool 5.4.0",
+  "exit_code": 0,
+  "artifacts": [
+    {
+      "address": "0x0",
+      "path": "native\\.pio\\build\\native_voice\\bootloader.bin",
+      "sha256": "b46ce1eab8ba053bef14930f4ae4cbbeb91779cc57b5680b45de2faf68442290"
+    },
+    {
+      "address": "0x8000",
+      "path": "native\\.pio\\build\\native_voice\\partitions.bin",
+      "sha256": "6c2f8eacfd2126b45bf0f67d75b6ce8e0b142d2e3ca7c427066376881d632674"
+    },
+    {
+      "address": "0xe000",
+      "path": "native\\.pio\\build\\native_voice\\ota_data_initial.bin",
+      "sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+    },
+    {
+      "address": "0x10000",
+      "path": "native\\.pio\\build\\native_voice\\firmware.bin",
+      "sha256": "5f7d10668b3dd267556e6506912064c74bfde8b1db720a8416880f0aca0e1aa2"
+    }
+  ]
+}

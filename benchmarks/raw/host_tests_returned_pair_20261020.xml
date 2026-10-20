@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="2.904" timestamp="2026-10-20T21:37:02.973633+05:30" hostname="THARUN"><testcase classname="" name="simulator.test_queries" time="0.000"><error message="collection failure">C:\Program Files\Python312\Lib\urllib\request.py:1344: in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+C:\Program Files\Python312\Lib\http\client.py:1336: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+C:\Program Files\Python312\Lib\http\client.py:1382: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+C:\Program Files\Python312\Lib\http\client.py:1331: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+C:\Program Files\Python312\Lib\http\client.py:1091: in _send_output
+    self.send(msg)
+C:\Program Files\Python312\Lib\http\client.py:1035: in send
+    self.connect()
+C:\Program Files\Python312\Lib\http\client.py:1001: in connect
+    self.sock = self._create_connection(
+C:\Program Files\Python312\Lib\socket.py:865: in create_connection
+    raise exceptions[0]
+C:\Program Files\Python312\Lib\socket.py:850: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+simulator\test_queries.py:15: in &lt;module&gt;
+    send("I am going to sleep")
+simulator\test_queries.py:10: in send
+    res = json.loads(urllib.request.urlopen(req).read().decode('utf-8'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python312\Lib\urllib\request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python312\Lib\urllib\request.py:515: in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python312\Lib\urllib\request.py:532: in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+C:\Program Files\Python312\Lib\urllib\request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+C:\Program Files\Python312\Lib\urllib\request.py:1373: in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Program Files\Python312\Lib\urllib\request.py:1347: in do_open
+    raise URLError(err)
+E   urllib.error.URLError: &lt;urlopen error [WinError 10061] No connection could be made because the target machine actively refused it&gt;</error></testcase></testsuite></testsuites>

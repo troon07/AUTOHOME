@@ -1,0 +1,15 @@
+area,source,result,scope
+Host regression,HOST_MEASURED,83 passed,Actual firmware C/C++ tests included
+Previous paired controller check rows,HARDWARE_MEASURED,81/81 PASS,Earlier image hashes; current paired regression pending
+Sequential command outcomes,HARDWARE_MEASURED,1000/1000,Idempotent OFF; GPIO inhibited
+Command ACK median / p95 / p99 (ms),HARDWARE_MEASURED,18.789 / 44.033 / 56.754,"Device RTT, not speech/physical actuation latency"
+HTTP loopback,HARDWARE_MEASURED,23/23 PASS,Includes virtual-house input/output/expiry cases
+Watchdog recovery,HARDWARE_MEASURED,11 recorded checks PASS; campaign incomplete,"Reset cause, boot counter and saved policy passed; final restored-policy read interrupted"
+Speech model readiness,HARDWARE_MEASURED,PASS,MultiNet6 English loaded; recognition currently fails
+Synthetic speech benchmark,SIMULATED input / HARDWARE_MEASURED processing,Completed: 0/16 command matches; 0/2 negative false accepts,All 18 PCM checksums matched; no human accuracy result
+House interface interaction,HOST_MEASURED,Layout/movement/tour/dropout inspected offline,No board decisions or fabricated outputs in preview
+Human microphone / acoustic evaluation,NOT_MEASURED,PENDING,Requires returned board and labeled human recordings
+Physical sensors / relays / energy,NOT_MEASURED,PENDING,Nothing wired; physical outputs inhibited
+Current Node B campaign,HARDWARE_MEASURED,32/32 rows passed,Shadow monitor/API tests; no actuation
+Evidence-monitor fault matrix,SIMULATED input / HOST_MEASURED execution,4096 conditions; zero necessary-contract violations,Four eligible cases refused; two physical false assertions under jointly lying sensors
+B update,HARDWARE_MEASURED,Flashed; single-board tested,Transport/provenance/PCM diagnostics and shadow monitor; A remains unavailable

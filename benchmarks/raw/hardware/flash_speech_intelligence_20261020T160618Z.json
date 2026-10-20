@@ -1,0 +1,34 @@
+{
+  "role": "B-speech",
+  "port": "COM9",
+  "mac": "e0:72:a1:f5:bc:b0",
+  "tool": "esptool 5.4.0",
+  "exit_code": 0,
+  "artifacts": [
+    {
+      "address": "0x0",
+      "path": "speech\\.pio\\build\\speech_intelligence\\bootloader.bin",
+      "sha256": "9bd289b07b7acc1531989c96661b8434811bdade62e8e759e51c20a873574bc3"
+    },
+    {
+      "address": "0x8000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\partitions.bin",
+      "sha256": "6c2f8eacfd2126b45bf0f67d75b6ce8e0b142d2e3ca7c427066376881d632674"
+    },
+    {
+      "address": "0xe000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\ota_data_initial.bin",
+      "sha256": "7d2c7ac4888bfd75cd5f56e8d61f69595121183afc81556c876732fd3782c62f"
+    },
+    {
+      "address": "0x10000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\firmware.bin",
+      "sha256": "523b8d0c37ec76cc71d83b3e19b2c01269f2abf747036aaaa1468a5ecd04c8a7"
+    },
+    {
+      "address": "0x610000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\srmodels\\srmodels.bin",
+      "sha256": "b46a65befe47187f793ffb8108f74ab091338060060a54d23b69c385c3213d80"
+    }
+  ]
+}

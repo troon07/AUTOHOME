@@ -1,0 +1,4 @@
+model_name,params,mode_a_latency_ms,mode_a_tokens_per_sec,mode_b_latency_ms,mode_c_latency_ms,mode_c_wire_bytes,mode_c_speedup,verdict,source_tag
+Nano-MLP (1.0M),1000000,33.33,30.0,27.41,37.81,250,0.882,HURT (Communication overhead exceeds compute savings),SIMULATED
+TinyStories (3.2M),3200000,106.67,9.38,27.41,115.63,500,0.923,HURT (Communication overhead exceeds compute savings),SIMULATED
+Micro-Transformer (15M),15000000,500.0,2.0,27.41,513.45,750,0.974,HURT (Communication overhead exceeds compute savings),SIMULATED

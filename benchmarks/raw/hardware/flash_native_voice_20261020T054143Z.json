@@ -1,0 +1,14 @@
+{
+  "role": "A",
+  "port": "COM5",
+  "mac": "e0:72:a1:f6:a9:68",
+  "tool": "esptool 4.5.1 ROM loader",
+  "exit_code": 1,
+  "artifacts": [
+    {
+      "address": "0x10000",
+      "path": "native\\.pio\\build\\native_voice\\firmware.bin",
+      "sha256": "64d245145107c61e09045ceda83e1954d5812b75f7b258f55642fba1317b74dd"
+    }
+  ]
+}

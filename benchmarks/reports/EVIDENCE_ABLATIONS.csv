@@ -1,0 +1,5 @@
+condition,input_source,execution_source,cases,verified_assertions,contract_violations,eligible_cases_not_verified,physical_false_assertions_in_modeled_lying_sensor_cases
+ack_only,SIMULATED,HOST_MEASURED,4096,4096,4088,0,2048
+feedback_only,SIMULATED,HOST_MEASURED,4096,256,248,0,128
+fresh_bound_feedback,SIMULATED,HOST_MEASURED,4096,32,24,0,16
+monitor_verified,SIMULATED,HOST_MEASURED,4096,4,0,4,2

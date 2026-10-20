@@ -1,0 +1,447 @@
+{
+  "source": "HARDWARE_MEASURED",
+  "started_utc": "2026-10-20T00:41:41.838805+00:00",
+  "duration_seconds_requested": 30.0,
+  "ports": [
+    "COM5",
+    "COM7"
+  ],
+  "firmware_sha256": {
+    "node_voice": "e99c0a45ecc3ccc9787af506c9d0c4c8b013c29e0a83d8102615b88a7c70469f",
+    "node_intelligence": "4402329f8c9c07880fef3125a2060547c6062dbb2db1d50efb82fe3ed203ff8d"
+  },
+  "records": [
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439418515000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "selftest",
+        "node": "A",
+        "passed": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439418515000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "selftest",
+        "node": "B",
+        "passed": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439418546000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "arena_probe",
+        "node": "A",
+        "bytes": 262144,
+        "peak_bytes": 262144,
+        "elapsed_us": 21337,
+        "passed": true,
+        "heap_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439418546000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "arena_probe",
+        "node": "B",
+        "bytes": 262144,
+        "peak_bytes": 262144,
+        "elapsed_us": 21335,
+        "passed": true,
+        "heap_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439419843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 10002,
+        "flash_bytes": 16777216,
+        "internal_free": 280408,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439419843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 9,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439423015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 40007,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439423015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439424859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 15003,
+        "flash_bytes": 16777216,
+        "internal_free": 280416,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439424859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 14,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439428015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 45008,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439428015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439429859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 20004,
+        "flash_bytes": 16777216,
+        "internal_free": 280416,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439429859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 19,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439433000000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 50009,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439433000000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439434843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 25005,
+        "flash_bytes": 16777216,
+        "internal_free": 280416,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439434843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 24,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439438000000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 55010,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439438000000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439439843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 30006,
+        "flash_bytes": 16777216,
+        "internal_free": 280416,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439439843000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 29,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439443015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 60011,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439443015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439444859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "B",
+        "uptime_ms": 35007,
+        "flash_bytes": 16777216,
+        "internal_free": 280416,
+        "internal_min": 280028,
+        "internal_largest": 270324,
+        "psram_total": 8388608,
+        "psram_free": 8373719,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5820,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM7",
+      "capture_monotonic_ns": 439444859000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "link",
+        "node": "B",
+        "accepted": 34,
+        "invalid": 0,
+        "replayed": 0
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439448015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "memory",
+        "node": "A",
+        "uptime_ms": 65012,
+        "flash_bytes": 16777216,
+        "internal_free": 290940,
+        "internal_min": 289744,
+        "internal_largest": 278516,
+        "psram_total": 8388608,
+        "psram_free": 8375219,
+        "psram_largest": 8257524,
+        "stack_free_bytes": 5932,
+        "rx_dropped": 0,
+        "tx_failed": 0,
+        "memory_config_ok": true
+      }
+    },
+    {
+      "port": "COM5",
+      "capture_monotonic_ns": 439448015000000,
+      "device": {
+        "source": "HARDWARE_MEASURED",
+        "kind": "safety",
+        "node": "A",
+        "remote_rejected": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "upstream": "https://github.com/espressif/esp-sr",
+  "version": "1.7.0",
+  "commit": "07b0a4d0f6b5de755874d5405150ee0a8eec9865",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "git_blob": "688a7a728f7c77232bc8526bab748a524f22ed8e",
+      "sha256": "8be507b090f8f505b686266d5a9f056f2edbc6110da94d7d9871494c1fd2ee2e",
+      "bytes": 6687
+    },
+    {
+      "path": "Kconfig.projbuild",
+      "git_blob": "4a9d8c751bfd38791cef73543fd6eca9d5d07d29",
+      "sha256": "a606cc9467058c485529f31fce3cd62461b1d7d33f3944c42b09a26e0b707670",
+      "bytes": 84054
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "8e206f3bc38f5fa84a4956f2d5030ca17daea0d7",
+      "sha256": "7d916fb00bc0742c47cafb0d0144b67f826d76779730b1cb8796045ea6ba1b9a",
+      "bytes": 1187
+    },
+    {
+      "path": "README.md",
+      "git_blob": "8e7040ae95bfa7d204440bcc0bbf80f62a6dc66b",
+      "sha256": "8537b4d333ebd62510a94ae1d695929339036fb3d45c4dac8792681240666dae",
+      "bytes": 5191
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/esp32s3/libesp_tts_chinese.a",
+      "git_blob": "53521ac069c9fb20a8d2c3f84a1ecf87fea3f386",
+      "sha256": "7034c1075a464ae355eb4452d267e27831ecb519bf4629b85464be03796819f3",
+      "bytes": 1546404
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/esp32s3/libvoice_set_xiaole.a",
+      "git_blob": "0291e6a7b98efd31e6051ec24026020103a858c1",
+      "sha256": "3cf241ca026f7497fec3ea961e83a7e7ccdfc7fa5440811be5e71ebc964fb08e",
+      "bytes": 4548092
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts.h",
+      "git_blob": "ad800303a177f9b64e9f1afe93a6c3245c641a67",
+      "sha256": "55430c22354dbf279bb3747a960bda74f678d6d28d25e731243ad6e13609d1c5",
+      "bytes": 3952
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_parser.h",
+      "git_blob": "ce71b04e319216cec2656e86bdc5c5158deab435",
+      "sha256": "4f69b3234337ce15eae661a662fbe9b208c780c0192b4dcb8f1b188b753b7172",
+      "bytes": 601
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_player.h",
+      "git_blob": "2070011af41aa33feec7c6a8b403304163aa5251",
+      "sha256": "15ef956397698de06ef91f15fca37c4fd802cfa05d888532736908383a28c7cc",
+      "bytes": 1924
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_stretcher.h",
+      "git_blob": "ab47b272c0d9ab4cb155405fa59b987eb10d1946",
+      "sha256": "0bafed0ec872724908254c16b702adc416acfb2e73d431d89fe90b66c2391682",
+      "bytes": 1952
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_voice.h",
+      "git_blob": "77f263e3935b3d1b473ba733ff8b22a9fdaf5465",
+      "sha256": "9cf7986ff5fbe1fcbf45116409636e3fca7630c6461be1d1faa3577e1944792c",
+      "bytes": 848
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_voice_template.h",
+      "git_blob": "ce5f5b6f45559854a39924cbfcbfe828ef993e0e",
+      "sha256": "d3e6aebae238a76c55445de63ba93a5d592575e4c6bb5bd9969ddcdb1fcf3bcd",
+      "bytes": 90
+    },
+    {
+      "path": "esp-tts/esp_tts_chinese/include/esp_tts_voice_xiaole.h",
+      "git_blob": "f87866ae6cb93ec36e39cda448d0ee84b3cf350c",
+      "sha256": "b7b9610f9ba1beac20eb0d58ef6b942e3b9099ee8bedb0622b0d4bef5e77e4ae",
+      "bytes": 88
+    },
+    {
+      "path": "idf_component.yml",
+      "git_blob": "c7daf08f400a80cd4f959013341b4ddcefbbec41",
+      "sha256": "6e657e2601d6e9e3f434e7ffa31ccfdc5f4db1d86b8ee7f346102b6454de9c5a",
+      "bytes": 274
+    },
+    {
+      "path": "include/esp32s3/dl_lib.h",
+      "git_blob": "47e7c86f6eba1cba429e99ecbf2c0e8d73348a27",
+      "sha256": "8afaa38d0f176eeb53e361bde387669bccacfe08732b1a8a59699ccbdd1c5cfb",
+      "bytes": 16837
+    },
+    {
+      "path": "include/esp32s3/dl_lib_coefgetter_if.h",
+      "git_blob": "a21de8d93c53bfffbceb485ea1bc68ee46e5237e",
+      "sha256": "24bd85c23504c2e0d81fa7deb1328c3be0e560e7a43cddf205f7b91b9d79d414",
+      "bytes": 3057
+    },
+    {
+      "path": "include/esp32s3/dl_lib_conv_queue.h",
+      "git_blob": "7cb9bf915313db2b501e79ff3349970f62a96f6f",
+      "sha256": "3e8e080d36413f8ef7502a1daceb382d61133bb3d6f7e7ba76b3c3bd3a8ac31d",
+      "bytes": 6883
+    },
+    {
+      "path": "include/esp32s3/dl_lib_convq8_queue.h",
+      "git_blob": "28c5da7952d775f9f52c71ff00d322f1f4f4352b",
+      "sha256": "a0b0d7bd343154d9a3974d4ad58c81ada8a5c4cc82d5384d14479f28aaa6809c",
+      "bytes": 13581
+    },
+    {
+      "path": "include/esp32s3/dl_lib_convq_queue.h",
+      "git_blob": "ff190fe71526690aaffb415f3efc375b5652bfc3",
+      "sha256": "ce5c2936ed34faf5d559ff90172d82d356ab5ab41da66c5cc37773c2d9b60285",
+      "bytes": 16782
+    },
+    {
+      "path": "include/esp32s3/dl_lib_matrix.h",
+      "git_blob": "b5fae740c772855b70aa3f5425008b7c4b61982f",
+      "sha256": "efdc279b5e92e1824d7cefadeae0a59088ec83a5d2291cf0c615ab1640ad9184",
+      "bytes": 8404
+    },
+    {
+      "path": "include/esp32s3/dl_lib_matrixq.h",
+      "git_blob": "8ad397baf4b20330f52a94f21c840bb982416c3f",
+      "sha256": "6426bbb51eb639b4aede6fa0a16c7808e46a1d6ac1a1f79a08139b56d99bf58c",
+      "bytes": 15957
+    },
+    {
+      "path": "include/esp32s3/dl_lib_matrixq8.h",
+      "git_blob": "377df7ccf572a504dfc88f1168476e335db91e92",
+      "sha256": "ff69a2680fb5edcff252d7fbfc34ede7d42f47991b078523427eeb30ed11a57e",
+      "bytes": 2225
+    },
+    {
+      "path": "include/esp32s3/esp_aec.h",
+      "git_blob": "03afc90ff048d1a0c062ea07263438e9c287cd72",
+      "sha256": "322e668fcfa4212385ccb5146c383eab84100afc1fe1728a9400ad1dbd064118",
+      "bytes": 3566
+    },
+    {
+      "path": "include/esp32s3/esp_afe_config.h",
+      "git_blob": "e4c681ee34d4e538f0b6e1ac3863637cd8d1b81c",
+      "sha256": "827b87a8638c79613b726f62a52157c921e1e117f794ea776ac562843ea76057",
+      "bytes": 5945
+    },
+    {
+      "path": "include/esp32s3/esp_afe_sr_iface.h",
+      "git_blob": "daf5b924b560f287c6785a62b951678a265a6928",
+      "sha256": "228ddd6c8230e349fccb93b034d9c8d083f3575ca1416dc3dc7b12ae2fc862a0",
+      "bytes": 7511
+    },
+    {
+      "path": "include/esp32s3/esp_afe_sr_models.h",
+      "git_blob": "feaad43c9bd9ff2f87cf5688395bc1c3be3e4653",
+      "sha256": "0347ef2e0d79a3dd8945a07a933154fd0052a121a3e592fbde9f24b0185b5402",
+      "bytes": 609
+    },
+    {
+      "path": "include/esp32s3/esp_agc.h",
+      "git_blob": "76d3015da6c5ee8c50c4c889ebb10343406955a2",
+      "sha256": "2c80df919981ab015c45d9e0acee3c06a331e4100600c84ed22b1d015a462267",
+      "bytes": 1419
+    },
+    {
+      "path": "include/esp32s3/esp_mase.h",
+      "git_blob": "0999762969c2d24eb88eb768ea60f0bf9cae2120",
+      "sha256": "21a54855f93da9dbfea0af8491099e6899bcb10ab606d2042190e93f81f601d4",
+      "bytes": 2608
+    },
+    {
+      "path": "include/esp32s3/esp_mn_iface.h",
+      "git_blob": "20f96d8ae55b3705fe0f52928369263fb4afbd23",
+      "sha256": "0c1a087277ac9769ff09903d874253da541922c0d2e0cfedd1a280b02939b1cf",
+      "bytes": 7902
+    },
+    {
+      "path": "include/esp32s3/esp_mn_models.h",
+      "git_blob": "8571648f304c211d4158934d80f0d1e81215b8fd",
+      "sha256": "87de5c35fce529c735ff93b961bf1643db09647608078fc78a1ac2dfab90d97e",
+      "bytes": 1575
+    },
+    {
+      "path": "include/esp32s3/esp_ns.h",
+      "git_blob": "c113aedca58076dec5562b5f0e937dc51b2a5702",
+      "sha256": "c027230ab1145cd5eb025e8e5ebc4ea7495597cbc41de94b133c9cc8d6ae99b2",
+      "bytes": 2263
+    },
+    {
+      "path": "include/esp32s3/esp_nsn_iface.h",
+      "git_blob": "df902a38a25180da07642745b84dd7883d1ba21f",
+      "sha256": "104e5aec56cebf539216e84ebce2b7aa513c869eecf5a9d6f396405b8e34ad02",
+      "bytes": 2109
+    },
+    {
+      "path": "include/esp32s3/esp_nsn_models.h",
+      "git_blob": "7b3bf49c108bc00c9f75dc71299e7d1ca805d789",
+      "sha256": "5739406b462311a59d053cc07cd621c498aade4f4167ce00f230997bb2fae9fd",
+      "bytes": 330
+    },
+    {
+      "path": "include/esp32s3/esp_vad.h",
+      "git_blob": "2440d39a79562d26bb45b55a4008e608c63a95e1",
+      "sha256": "4a7300f71efbd35361f1afb3ec8173ff18a481fb736f701f081a300cc0260d5f",
+      "bytes": 2707
+    },
+    {
+      "path": "include/esp32s3/esp_wn_iface.h",
+      "git_blob": "bbcdcb991e93f8cfccaec65d9941e7accfa2e22d",
+      "sha256": "ade1d875587b1b64187373c9d71f2884388c882c8b56e4bc24059e6640b64c29",
+      "bytes": 6654
+    },
+    {
+      "path": "include/esp32s3/esp_wn_models.h",
+      "git_blob": "38972e727c4ca1e03e9bacf4db86e98194a9c249",
+      "sha256": "b1679144c14f42a8e1c08e2f1940e023e85600d9efe48ea2ee26841214a9fcf9",
+      "bytes": 3248
+    },
+    {
+      "path": "include/esp32s3/flite_g2p.h",
+      "git_blob": "0d081cdf5ebf2c18273b794d05b8926f836b1013",
+      "sha256": "5ea8570d16a0698d5fd1e7ae8a54794fa2c9f170ecc5b8efe882e5418a83645e",
+      "bytes": 484
+    },
+    {
+      "path": "lib/esp32s3/libc_speech_features.a",
+      "git_blob": "f09717cb625e74d796d4e6150beed0ef43faaa6c",
+      "sha256": "544acd5c4e1da0200b3b90981dd068ac8aee077809ba2217c6a94616cef20cde",
+      "bytes": 598288
+    },
+    {
+      "path": "lib/esp32s3/libdl_lib.a",
+      "git_blob": "8315980641df7a445e53684530ce6897feb4b1ef",
+      "sha256": "5109a41ce5fda9da1cef81b309ab08cfc4cc3c90c210cf7558fed80037ec77d5",
+      "bytes": 3550770
+    },
+    {
+      "path": "lib/esp32s3/libesp_audio_front_end.a",
+      "git_blob": "0d7db59df5f0ed1bfce41712115af4143a2bc87a",
+      "sha256": "54dd2964c8a3ea02d9690c2ac50b61fa40ae0e03ce5883b24152d0f6a94e724c",
+      "bytes": 296108
+    },
+    {
+      "path": "lib/esp32s3/libesp_audio_processor.a",
+      "git_blob": "8fd8b01c0b18cd81c20607367b57af2c469ac70d",
+      "sha256": "40ea9b4f3c66a4c1ef5e5160aea2ba9d28d327f84348e90891aab9e1f5550d65",
+      "bytes": 3482100
+    },
+    {
+      "path": "lib/esp32s3/libflite_g2p.a",
+      "git_blob": "99d792047c7f07733e538049bf355b562dcdf2fa",
+      "sha256": "5fb21804baec0e53883a046cafb099b568a5a181e906ed0ee70370e036836384",
+      "bytes": 1942754
+    },
+    {
+      "path": "lib/esp32s3/libfst.a",
+      "git_blob": "1e768bbc955d76571259e8d7433fa9f81491f0db",
+      "sha256": "464146db3ca1b3c6f135b757b0b08d598d6c00646ba17ef0f18fd687ad5f37fe",
+      "bytes": 460286
+    },
+    {
+      "path": "lib/esp32s3/libhufzip.a",
+      "git_blob": "dec83b012785398c24a5ea10f4b907d1ef4ea308",
+      "sha256": "0930fdbccb46ff20e2e81367c2e2d6399971a3b7881413efa440ab92d308ca64",
+      "bytes": 185556
+    },
+    {
+      "path": "lib/esp32s3/libmultinet.a",
+      "git_blob": "e07967b04bd7e1672ddb692b64205e30285bc510",
+      "sha256": "c5d8c65bee0467ad3620252c62d038364747e1a58344e6e070e9d10da8062e22",
+      "bytes": 1853570
+    },
+    {
+      "path": "lib/esp32s3/libnsnet.a",
+      "git_blob": "402023f48d0cb352bbc3d05c9b910eff8246d675",
+      "sha256": "dc88b473748e2bd4eca3457ebd73d2a284941578e7f8fa3cef481de79df6dca1",
+      "bytes": 267776
+    },
+    {
+      "path": "lib/esp32s3/libwakenet.a",
+      "git_blob": "625de128da37e0eef0f176782e3d845dd30af217",
+      "sha256": "def41e81c18e39ced27061e07763819a3334446e2f2ac445be2132ead38952dc",
+      "bytes": 653424
+    },
+    {
+      "path": "model/movemodel.py",
+      "git_blob": "1a84a82d4f5996478685eb1f13a5a5c37f55abba",
+      "sha256": "df58696d090c1e178d20453ae538291b78318521b864c3c380f32bd3ac1e59aa",
+      "bytes": 4870
+    },
+    {
+      "path": "model/multinet_model/fst/commands_cn.txt",
+      "git_blob": "f813fa04046c83fab716fb2305b8f3419b712444",
+      "sha256": "a516f97ec1a826c7cd8396156857169aa3b73df122596f7854d90b23a15f2252",
+      "bytes": 7298
+    },
+    {
+      "path": "model/multinet_model/fst/commands_en.txt",
+      "git_blob": "adbb281bc9726e9a62f2814f07935da0266b1645",
+      "sha256": "517b7df8f3471105ae638cd910f4d1c85f9ba7eab9e960aad2c6ca82713ad47e",
+      "bytes": 2350
+    },
+    {
+      "path": "model/multinet_model/mn6_en/_MODEL_INFO_",
+      "git_blob": "dc2c373a076bd088273ef6f7e1eb17995fd242db",
+      "sha256": "bc155320b2b9f093c655eea2dbbe75157284f871ecb3fec10f523d1dbac5ef66",
+      "bytes": 159
+    },
+    {
+      "path": "model/multinet_model/mn6_en/mn6_data",
+      "git_blob": "313d20b16108402386752c9f96c12af93744aa14",
+      "sha256": "c277f32170f54d4578f6d50096cf5c3c2a288cea3585b43c99ec3d3ea0caf693",
+      "bytes": 3766762
+    },
+    {
+      "path": "model/multinet_model/mn6_en/mn6_index",
+      "git_blob": "5db24af4f534c693fcd58a945eeb0b80506ed57c",
+      "sha256": "6fc49932b9cecda2d00a26241d485b94ef6d8ba864d056fcaf3b6591ec398dbe",
+      "bytes": 4032
+    },
+    {
+      "path": "model/multinet_model/mn6_en/vocab",
+      "git_blob": "c19bc3a8abcaf3fa1c745d0d34f2eed9f715173a",
+      "sha256": "93ada28f3e3fccb11b4da9b3b6265101d41b9b0faf4e7fc081a8d3c6d7ae3ab6",
+      "bytes": 7314
+    },
+    {
+      "path": "model/pack_model.py",
+      "git_blob": "1fc85aa9ca39573af6f61fc426a07ffbc0125f73",
+      "sha256": "2b61699f08e97a53d5c3406d8be9d962042877b674ebc28c3d5b324ee13d389c",
+      "bytes": 3941
+    },
+    {
+      "path": "src/esp_afe_sr_1mic.ref",
+      "git_blob": "15bf665d5cfb8bee8deb3212aefe6d3683ad3bb0",
+      "sha256": "2ded841bfe853bf369baa81bb496b888fa72e99969356d18a337cbf1a6983f6a",
+      "bytes": 19192
+    },
+    {
+      "path": "src/esp_mn_speech_commands.c",
+      "git_blob": "ddb0b55e7838395f32ac6c0a6564009ebf641e55",
+      "sha256": "1399936cffec2cc49a1b95460c934fa972ba0f3ddcbead855b17612eeb5fb0a4",
+      "bytes": 11011
+    },
+    {
+      "path": "src/esp_process_sdkconfig.c",
+      "git_blob": "d42c0d48ed9f76c3978b11d11ec050a878dd9f85",
+      "sha256": "26ac4fe889fb028d1fd09f5b77234e296a6a33050015600f043b50dce2d66618",
+      "bytes": 33219
+    },
+    {
+      "path": "src/include/esp_mn_speech_commands.h",
+      "git_blob": "335c88f49b21f43443f5815ca1d69ce48fd820ad",
+      "sha256": "e9ad66b0d4433d5e7ee5709944261fb17e4decc8f10a754175c737b8985b8781",
+      "bytes": 4954
+    },
+    {
+      "path": "src/include/esp_process_sdkconfig.h",
+      "git_blob": "0fa6e10a40ffb5ced06b9e098d466404fec481b9",
+      "sha256": "e938d7ef83f895660694d3012390a7dd34fe5fd3328a4cf857692470d1d54ce2",
+      "bytes": 679
+    },
+    {
+      "path": "src/include/model_path.h",
+      "git_blob": "a9957a30036b02776b2ab591ce1e9806675ab2ee",
+      "sha256": "6f19a0d63eeeac489d58e52df29e560aaeabaa10ced7750d89076ed846e89c2b",
+      "bytes": 4807
+    },
+    {
+      "path": "src/model_path.c",
+      "git_blob": "9e34b6cce3b01a1122a7c71087bd492274acaca5",
+      "sha256": "66cb8f932e1ec41a2bf45a96acaff00b372bdda5887df3651cb1ac0cbf627786",
+      "bytes": 20139
+    }
+  ]
+}

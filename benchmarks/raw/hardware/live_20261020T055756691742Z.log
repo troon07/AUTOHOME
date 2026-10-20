@@ -1,0 +1,33 @@
+COM5 [0;32mI (96) boot:  4 model            Unknown data     01 40 0
+COM5 {"source":"HARDWARE_MEASURED","kind":"fault_armed","type":"O"}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":50006,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4016,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":0,"duplicates":0,"last_command":0,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":9847,"max_exec_us":184,"max_late_us":144,"deadline_misses":0,"stack_free_bytes":5152,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":9848,"max_exec_us":748,"max_late_us":5,"deadline_misses":0,"stack_free_bytes":4288,"watchdog":true,"diagnostic_dropped":0}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptim
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":801261,"flash_bytes":16777216,"internal_free":107651,"internal_min":53547,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":761,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":160052,"max_exec_us":1175,"max_late_us":266,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"state","known":false,"light":false,"fan":false,"mode":0,"grace_ms":120000,"auto_flags":1,"last_command":0,"age_ms":6632}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":55009,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4016,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":0,"duplicates":0,"last_command":0,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":10848,"max_exec_us":184,"max_late_us":144,"deadline_misses":0,"stack_free_bytes":5152,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":10849,"max_exec_us":748,"max_late_us":5,"deadline_misses":0,"stack_free_bytes":4288,"watchdog":true,"diagnostic_dropped":0}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":806264,"flash_bytes":16777216,"internal_free":107651,"internal_min":53547,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":761,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":161053,"max_exec_us":1175,"max_late_us":266,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}

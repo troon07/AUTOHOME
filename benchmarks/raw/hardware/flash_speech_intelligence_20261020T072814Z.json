@@ -1,0 +1,14 @@
+{
+  "role": "B-speech",
+  "port": "COM7",
+  "mac": "e0:72:a1:f5:bc:b0",
+  "tool": "esptool 5.4.0",
+  "exit_code": 0,
+  "artifacts": [
+    {
+      "address": "0x10000",
+      "path": "speech\\.pio\\build\\speech_intelligence\\firmware.bin",
+      "sha256": "e230648d8505a4e7a7b725e2a9c2960fd058303328ff3cee64942adf8dd83bb7"
+    }
+  ]
+}

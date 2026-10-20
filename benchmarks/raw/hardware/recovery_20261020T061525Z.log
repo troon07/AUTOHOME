@@ -1,0 +1,146 @@
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptim
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":1075103,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4016,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":1,"duplicates":2,"last_command":1022,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":214867,"max_exec_us":420,"max_late_us":144,"deadline_misses":0,"stack_free_bytes":4016,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":214867,"max_exec_us":1511,"max_late_us":5,"deadline_misses":0,"stack_free_bytes":4096,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"policy_saved","boot":5,"reset_reason":0,"grace_ms":120000,"auto_flags":1,"away":false,"physical_outputs_enabled":false}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptim
+COM7 {"source":"HARDWARE_MEASURED","kind":"queued","accepted":true,"id":1023}
+COM5 {"source":"HARDWARE_MEASURED","kind":"actuation","id":1023,"status":0,"processing_us":39,"light":false,"fan":false}
+COM7 {"source":"HARDWARE_MEASURED","kind":"transaction","id":1023,"phase":2,"status":0,"attempts":1,"rtt_us":18815,"processing_us":39,"light":false,"fan":false,"outcome_known":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"queued","accepted":true,"id":1024}
+COM5 {"source":"HARDWARE_MEASURED","kind":"actuation","id":1024,"status":0,"processing_us":30,"light":false,"fan":false}
+COM7 {"source":"HARDWARE_MEASURED","kind":"transaction","id":1024,"phase":2,"status":0,"attempts":1,"rtt_us":15807,"processing_us":30,"light":false,"fan":false,"outcome_known":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":1003468,"flash_bytes":16777216,"internal_free":107651,"internal_min":54875,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":995,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":200495,"max_exec_us":1247,"max_late_us":2,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":1080105,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4016,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":1,"duplicates":2,"last_command":1024,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":215867,"max_exec_us":420,"max_late_us":144,"deadline_misses":0,"stack_free_bytes":4016,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":215868,"max_exec_us":1511,"max_late_us":5,"deadline_misses":0,"stack_free_bytes":4096,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"persistence_commit","ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"policy_saved","boot":5,"reset_reason":0,"grace_ms":45000,"auto_flags":1,"away":true,"physical_outputs_enabled":false}
+COM5 {"source":"HARDWARE_MEASURED","kind":"watchdog_injection","armed":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":1008469,"flash_bytes":16777216,"internal_free":107651,"internal_min":54875,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":1000,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":201495,"max_exec_us":1247,"max_late_us":2,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":1085106,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4016,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":1,"duplicates":2,"last_command":1024,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":216109,"max_exec_us":420,"max_late_us":144,"deadline_misses":0,"stack_free_bytes":4016,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":216868,"max_exec_us":1511,"max_late_us":5,"deadline_misses":0,"stack_free_bytes":4096,"watchdog":true,"diagnostic_dropped":0}
+COM5 [0;31mE (1086379) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:[0m
+COM5 [0;31mE (1086379) task_wdt:  - ControlTask (CPU 1)[0m
+COM5 [0;31mE (1086379) task_wdt: Tasks currently running:[0m
+COM5 [0;31mE (1086379) task_wdt: CPU 0: IDLE0[0m
+COM5 [0;31mE (1086379) task_wdt: CPU 1: IDLE1[0m
+COM5 [0;31mE (1086379) task_wdt: Aborting.[0m
+COM5 
+COM5 abort() was called at PC 0x4200b530 on core 0
+COM5 
+COM5 
+COM5 Backtrace: 0x403764ae:0x3fc979a0 0x4037b7a1:0x3fc979c0 0x403828d2:0x3fc979e0 0x4200b530:0x3fc97a50 0x40376e31:0x3fc97a80 0x4206fac7:0x3fcf5450 0x4200bf0e:0x3fcf5470 0x4037cd4f:0x3fcf5490
+COM5 
+COM5 
+COM5 
+COM5 
+COM5 ELF file SHA256: 8f55db3027eb037b
+COM5 
+COM5 Rebooting...
+COM5 ESP-ROM:esp32s3-20210327
+COM5 Build:Mar 27 2021
+COM5 rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+COM5 Saved PC:0x4037602c
+COM5 SPIWP:0xee
+COM5 mode:DIO, clock div:1
+COM5 load:0x3fce3808,len:0x1820
+COM5 load:0x403c9700,len:0xe6c
+COM5 load:0x403cc700,len:0x3048
+COM5 entry 0x403c997c
+COM5 [0;32mI (24) boot: ESP-IDF 4.4.7 2nd stage bootloader[0m
+COM5 [0;32mI (24) boot: compile time 10:42:33[0m
+COM5 [0;32mI (24) boot: Multicore bootloader[0m
+COM5 [0;32mI (26) boot: chip revision: v0.2[0m
+COM5 [0;32mI (30) qio_mode: Enabling default flash chip QIO[0m
+COM5 [0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+COM5 [0;32mI (40) boot.esp32s3: SPI Mode       : QIO[0m
+COM5 [0;32mI (44) boot.esp32s3: SPI Flash Size : 16MB[0m
+COM5 [0;32mI (49) boot: Enabling RNG early entropy source...[0m
+COM5 [0;32mI (55) boot: Partition Table:[0m
+COM5 [0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+COM5 [0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+COM5 [0;32mI (73) boot:  1 otadata          OTA data         01 00 0000e000 00002000[0m
+COM5 [0;32mI (81) boot:  2 app0             OTA app          00 10 00010000 00300000[0m
+COM5 [0;32mI (88) boot:  3 app1             OTA app          00 11 00310000 00300000[0m
+COM5 [0;32mI (95) boot:  4 model            Unknown data     01 40 00610000 00600000[0m
+COM5 [0;32mI (103) boot:  5 storage          Unknown data     01 82 00c10000 003f0000[0m
+COM5 [0;32mI (110) boot: End of partition table[0m
+COM5 [0;32mI (115) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15050h ( 86096) map[0m
+COM5 [0;32mI (136) esp_image: segment 1: paddr=00025078 vaddr=3fc967f0 size=046c0h ( 18112) load[0m
+COM5 [0;32mI (140) esp_image: segment 2: paddr=00029740 vaddr=40374000 size=068d8h ( 26840) load[0m
+COM5 [0;32mI (147) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=71f90h (466832) map[0m
+COM5 [0;32mI (221) esp_image: segment 4: paddr=000a1fb8 vaddr=4037a8d8 size=0bf10h ( 48912) load[0m
+COM5 [0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+COM5 [0;32mI (239) boot: Disabling RNG early entropy source...[0m
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"persistence_boot","ok":true,"boot":6}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"boot_recovery","reset_reason":6,"boot":6,"physical_outputs_enabled":false}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":1013470,"flash_bytes":16777216,"internal_free":107651,"internal_min":54875,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":1005,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":202495,"max_exec_us":1247,"max_late_us":2,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"policy_saved","boot":6,"reset_reason":6,"grace_ms":45000,"auto_flags":1,"away":true,"physical_outputs_enabled":false}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"memory","node":"A","uptime_ms":5004,"flash_bytes":16777216,"internal_free":190075,"internal_min":180851,"internal_largest":151552,"psram_total":8388608,"psram_free":8386111,"psram_largest":8257536,"stack_free_bytes":4160,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"safety","node":"A","rejected":0,"duplicates":0,"last_command":0,"command_dropped":0,"radio":true}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"ControlTask","core":1,"priority":5,"period_ms":5,"jobs":855,"max_exec_us":180,"max_late_us":4,"deadline_misses":0,"stack_free_bytes":5232,"watchdog":true,"diagnostic_dropped":0}
+COM5 
+COM5 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"A","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":855,"max_exec_us":725,"max_late_us":4,"deadline_misses":0,"stack_free_bytes":4288,"watchdog":true,"diagnostic_dropped":0}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"state","known":true,"light":false,"fan":false,"mode":1,"grace_ms":45000,"auto_flags":1,"last_command":0,"age_ms":30}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"queued","accepted":true,"id":1}
+COM5 {"source":"HARDWARE_MEASURED","kind":"actuation","id":1,"status":0,"processing_us":29,"light":false,"fan":false}
+COM7 {"source":"HARDWARE_MEASURED","kind":"transaction","id":1,"phase":2,"status":0,"attempts":1,"rtt_us":17811,"processing_us":29,"light":false,"fan":false,"outcome_known":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"queued","accepted":true,"id":2}
+COM5 {"source":"HARDWARE_MEASURED","kind":"actuation","id":2,"status":0,"processing_us":28,"light":false,"fan":false}
+COM7 {"source":"HARDWARE_MEASURED","kind":"transaction","id":2,"phase":2,"status":0,"attempts":1,"rtt_us":19882,"processing_us":28,"light":false,"fan":false,"outcome_known":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"queued","accepted":true,"id":3}
+COM5 {"source":"HARDWARE_MEASURED","kind":"actuation","id":3,"status":0,"processing_us":29,"light":false,"fan":false}
+COM7 {"source":"HARDWARE_MEASURED","kind":"transaction","id":3,"phase":2,"status":0,"attempts":1,"rtt_us":16750,"processing_us":29,"light":false,"fan":false,"outcome_known":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"memory","node":"B","uptime_ms":1018472,"flash_bytes":16777216,"internal_free":107651,"internal_min":54875,"internal_largest":59392,"psram_total":8388608,"psram_free":4089807,"psram_largest":3866624,"stack_free_bytes":1032,"rx_dropped":0,"tx_failed":0,"memory_config_ok":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"link","node":"B","accepted":1010,"invalid":0,"replayed":0,"authenticated":true,"radio":true}
+COM7 
+COM7 {"source":"HARDWARE_MEASURED","kind":"rtos","node":"B","task":"LinkTask","core":0,"priority":3,"period_ms":5,"jobs":203495,"max_exec_us":1247,"max_late_us":2,"deadline_misses":0,"stack_free_bytes":3244,"watchdog":true,"diagnostic_dropped":0}

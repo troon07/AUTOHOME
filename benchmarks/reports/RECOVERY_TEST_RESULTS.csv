@@ -1,0 +1,13 @@
+test,source,status,details
+recovery_gpio_inhibited,HARDWARE_MEASURED,PASS,
+recovery_away,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1023, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 17776, ""processing_us"": 33, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+recovery_custom_grace,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1024, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 19824, ""processing_us"": 26, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+policy_committed_before_reset,HARDWARE_MEASURED,PASS,
+watchdog_boot_counter_advanced,HARDWARE_MEASURED,PASS,
+task_watchdog_reset_reason,HARDWARE_MEASURED,PASS,
+nvs_policy_survived_watchdog,HARDWARE_MEASURED,PASS,
+offline_outputs_after_recovery,HARDWARE_MEASURED,PASS,
+radio_command_after_watchdog,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 1, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 16777, ""processing_us"": 24, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+restore_original_grace,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 2, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 18748, ""processing_us"": 26, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+restore_original_scene,HARDWARE_MEASURED,PASS,"{""source"": ""HARDWARE_MEASURED"", ""kind"": ""transaction"", ""id"": 3, ""phase"": 2, ""status"": 0, ""attempts"": 1, ""rtt_us"": 15777, ""processing_us"": 28, ""light"": false, ""fan"": false, ""outcome_known"": true}"
+original_policy_restored,HARDWARE_MEASURED,PASS,

@@ -1,0 +1,14 @@
+{
+  "audio_source": "SIMULATED",
+  "processing_source": "HARDWARE_MEASURED",
+  "firmware_sha256": {
+    "A": "edb0ff713a1773576b3089535120e33fe0a368be3cd44ab5f41cd73e41899af4",
+    "B": "b127f5d99a7943ddd76a7305261ac0278584545c746c14942abf705f61a37e91",
+    "model": "b46a65befe47187f793ffb8108f74ab091338060060a54d23b69c385c3213d80"
+  },
+  "results": [],
+  "errors": [
+    "<HTTPError 502: 'ESP32 unavailable; no simulated fallback'>"
+  ],
+  "limitations": "One synthetic voice; no independent human speakers, acoustic room/noise/distance validation, or model comparison. No accuracy generalization."
+}

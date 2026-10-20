@@ -1,0 +1,31 @@
+{
+  "source": "SIMULATED",
+  "model_params": 3200000,
+  "hidden_dim": 256,
+  "layers": 12,
+  "seq_len": 1,
+  "tensor_split_bytes": 256,
+  "mode_a_single_node": {
+    "latency_ms": 106.67,
+    "node_a_psram_bytes": 3212544,
+    "node_b_psram_bytes": 0,
+    "network_bytes_transferred": 0,
+    "tokens_per_second": 9.38
+  },
+  "mode_b_parallel_tasks": {
+    "latency_ms": 27.41,
+    "semantic_packet_bytes": 32,
+    "network_time_ms": 4.71
+  },
+  "mode_c_split_model": {
+    "latency_ms": 115.63,
+    "node_a_compute_ms": 53.33,
+    "node_b_compute_ms": 53.33,
+    "quant_serialization_ms": 0.03,
+    "network_transfer_ms": 8.93,
+    "chunks_transmitted": 2,
+    "total_wire_bytes": 500,
+    "speedup_vs_single_node": 0.923,
+    "helped_or_hurt": "HURT (Communication overhead exceeds compute savings)"
+  }
+}

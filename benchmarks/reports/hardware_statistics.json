@@ -1,0 +1,20 @@
+{
+  "n": 1000,
+  "mean": 18444.098,
+  "median": 17811.5,
+  "p95": 23647.35,
+  "p99": 27813.04,
+  "minimum": 15651,
+  "maximum": 41648,
+  "mean_ci95_bootstrap": [
+    18290.404199999997,
+    18602.69005
+  ],
+  "bootstrap_seed": 20261020,
+  "bootstrap_resamples": 2000,
+  "completion_wilson_ci95": [
+    0.996173241514445,
+    1
+  ],
+  "capture_recovery_queries": 0
+}

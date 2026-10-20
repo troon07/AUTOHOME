@@ -1,0 +1,6 @@
+{
+  "source": "HOST_MEASURED",
+  "error": "First native/speech HIL run failed during final export: runner tried to hash an unused native_intelligence artifact. Its in-memory raw trace was not exported. Console test observations from that run are not used as publication results.",
+  "fix": "Select actual per-board artifact paths and incrementally journal serial observations, cases and trials. A fresh complete run is required.",
+  "additional_observation": "Two stale-state timing assertions failed in that run; a targeted outage probe afterward observed unknown state at age 6795 ms and refused stale control. Final complete rerun retains full traces."
+}
